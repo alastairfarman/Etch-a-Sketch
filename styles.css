@@ -1,0 +1,90 @@
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+    background-color: rgb(238, 238, 238);
+}
+  
+  .main{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(238, 238, 238);
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    color:white;
+    
+ }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+ }
+
+ #gridNumber {
+    font-family:'Kdam Thmor Pro', sans-serif;
+    font-size: larger;
+    font-weight: light;
+    background-color: whitesmoke;
+    color: #404E5C;
+    border: solid rgba(64, 78, 92, 0.2);
+    border-width: 0.5px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 8px 8px 10px 4px rgba(200,200,200,0.3),-8px -8px 8px 0px #FFFFFF;
+
+ }
+
+ #gridNumber:active {
+    background-color: #4f6272;
+    color: white;
+    box-shadow: 8px 8px 10px 4px rgba(200,200,200,0.3),-8px -8px 8px 0px #FFFFFF, inset 3px 3px 5px 0px #252f38;
+    
+ }
+  #container {
+    display: grid;
+    grid-gap: 0;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    width: 500px;
+    height:500px;
+    border-radius: 20px;
+    border: solid rgba(255,255,255,0.5);
+    background-color: whitesmoke;
+    box-shadow: 6px 6px 16px 0px rgba(200,200,200,0.3),-6px -6px 16px 0px #FFFFFF;
+    position: relative;
+    padding: 2rem;
+    z-index: 0;
+  }
+
+  .grid-item {
+    padding: 20%;
+    text-align: center;
+    border: solid rgba(255,255,255,0.5);
+    box-shadow: inset 3px 3px 3px 0px rgba(200,200,200,0.05), inset -3px -3px 3px 0px rgba(200,200,200,0.05);
+    border-width: 0.1px;
+
+    animation-name: out;
+    animation-duration: 10s;
+    animation-timing-function: cubic-bezier(1, 0.01, 1, 0.01);
+  }
+
+  .grid-item:hover {
+    background-color: #DD7596;
+    animation-name: in;
+    animation-duration: 0.1s;  
+  }
+
+  @keyframes in {
+    from {background-color: white};
+    to {background-color:#CF1259;}
+  }
+
+  @keyframes out {
+    from {background-color:#CF1259};
+    to {background-color: white};
+    
+}
+
+  
